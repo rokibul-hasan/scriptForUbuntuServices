@@ -17,3 +17,11 @@ phpenmod mbstring;
 systemctl restart apache2;
 
 apt-get install freeradius freeradius-mysql freeradius-utils -y;
+
+systemctl enable freeradius.service;
+
+apt-get install supervisor -y;
+
+a2enmod rewrite enable;
+
+
